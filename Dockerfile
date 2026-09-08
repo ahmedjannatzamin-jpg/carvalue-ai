@@ -6,9 +6,8 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY backend/ ./backend/
-
-WORKDIR /app/backend
+COPY main.py .
+COPY car_price_model.pkl .
 
 EXPOSE 8000
 
